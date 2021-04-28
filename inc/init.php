@@ -158,6 +158,11 @@ if ($conf['gzip_output'] &&
     ob_start('ob_gzhandler');
 }
 
+if (!function_exists('session_name')) {
+	echo "This PHP installation does not have the Session Handling enabled! <br/> Please install the Session Extension! (php*-session)";
+	die "PHP does not have session handling enabled (perhaps you need to install php##-session)!"
+}
+
 // init session
 if(!headers_sent() && !defined('NOSESSION')) {
     if(!defined('DOKU_SESSION_NAME'))     define ('DOKU_SESSION_NAME', "DokuWiki");

@@ -583,7 +583,7 @@ function check_functions(){
                          'glob header ignore_user_abort ini_get mkdir '.
                          'ob_start opendir parse_ini_file readfile realpath '.
                          'rename rmdir serialize session_start unlink usleep '.
-                         'preg_replace file_get_contents htmlspecialchars_decode '.
+                         'preg_replace file_get_contents htmlspecialchars_decode json_encode '.
                          'spl_autoload_register stream_select fsockopen pack xml_parser_create');
 
     if (!function_exists('mb_substr')) {
